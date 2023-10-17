@@ -8,7 +8,6 @@ local opts = {
 }
 
 local mappings = {
-  ["<c-space"] = { "ilocal", "hola" },
   g = {
     name = "git",
     j = { "<cmd>GitGutterNextHunk<cr>", "Saltar al proximo cambio" },
@@ -178,6 +177,19 @@ local imappings = {
   ["<C-s>"] = { "<Esc><cmd>wa<cr>i", "Guardar archivo" },
 }
 
+local copts = {
+  mode = "c",
+  prefix = "",
+  buffer = nil,
+  silent = true,
+  noremap = true,
+  nowait = true,
+}
+
+local cmappings = {
+  ["<C-l>"] = { "<Esc>","Modo Normal" }
+}
+
 local which_key = require("which-key")
 
 which_key.register(mappings, opts)
@@ -185,3 +197,6 @@ which_key.register(vmappings, vopts)
 which_key.register(tmappings, topts)
 which_key.register(imappings, iopts)
 which_key.register(lmappings, lopts)
+which_key.register(cmappings,copts)
+
+vim.keymap.set("n","<C-Space>","ihola")
