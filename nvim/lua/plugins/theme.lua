@@ -71,7 +71,7 @@ return {
   },
   {
     "akinsho/bufferline.nvim",
-    version = "v3.*",
+    version = "*",
     config = function()
       require("eduardo.bufferline")
     end,

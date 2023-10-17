@@ -26,8 +26,8 @@ return {
           i = {
             ["<C-j>"] = actions.move_selection_next,
             ["<C-k>"] = actions.move_selection_previous,
-            ["<C-q>"] = actions.close,
-            ["<C-e>"] = actions.select_tab,
+            -- ["<C-q>"] = actions.close,
+            ["<C-e>"] = actions.select_default,
           },
         },
         vimgrep_arugments = {
@@ -38,6 +38,7 @@ return {
           "--line-number",
           "--column",
           "--smart-case",
+          "--hidden",
         },
         prompt_prefix = icon.ui.Telescope .. "  ",
         selection_caret = "  ",
@@ -79,9 +80,9 @@ return {
         },
         extensions = {
           ["ui-select"] = {
-            require("telescope.themes").get_dropdown()
-          }
-        }
+            require("telescope.themes").get_dropdown(),
+          },
+        },
       },
     })
     require("telescope").load_extension("project")

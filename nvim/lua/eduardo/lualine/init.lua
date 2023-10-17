@@ -6,7 +6,7 @@ require("lualine").setup({
     component_separators = { left = "", right = "" },
     section_separators = { left = "", right = "" },
     disabled_filetypes = {
-      "neo-tree"
+      "neo-tree","TelescopePrompt","dashboard","help","qt"
     },
     always_divide_middle = false,
     globalstatus = true,

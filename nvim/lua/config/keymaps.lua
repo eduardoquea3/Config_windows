@@ -99,7 +99,7 @@ local lmappings = {
   r = {
     r = { ":luafile %<cr>", "Actualizar config" },
   },
-  q = { ":confirm q<cr>", "Cerrar neovim" },
+  q = { ":confirm qall<cr>", "Cerrar neovim" },
   w = { ":w<cr>", "Guardar archivo" },
   g = {
     name = "Lazygit",
